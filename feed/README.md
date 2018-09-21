@@ -1,4 +1,4 @@
-# Feed assignment (candindate)
+# Feed assignment (candidate)
 
 Dear candidate,
 
