@@ -1,0 +1,14 @@
+html
+  head
+    title Feed Assignment
+  body
+    h1 Feed Assignment
+    table
+    each subreddit, index in subreddits
+      td
+        p #{subreddit.title}
+        p !{subreddit.content}
+        a(href=`https://reddit.com/r/${subreddit.category}`) /r/#{subreddit.category}
+        br
+        a(href=subreddit.link) Read more..
+        hr

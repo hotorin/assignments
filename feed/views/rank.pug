@@ -1,0 +1,18 @@
+- var rows = ['0', '1', '2', '3', '4', '5', '6', '7', '8'];
+- var headers = ['name', 'count'];
+
+html
+  head
+    title= 'Feed Assignment'
+  body
+    h1= 'Top 10 subreddit with youtube.com domain'
+    table
+        tr
+          th=''
+          each header in headers
+            th= header
+        each r, index in rank
+          tr
+            td= index+1
+            td= r.name
+            td= r.count

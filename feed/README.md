@@ -26,11 +26,11 @@ choices you make as a developer, and how you solve problems presented to you.
 
 ## Task
 
-1. Periodically read feed from https://www.reddit.com/domain/youtube.com/.rss and store it in database
+1. Periodically read feed from https://www.reddit.com/domain/youtube.com/.rss and store it in database (exclude duplicated feed entry)
 
 2. Create RESTful web service to provide those data
 
-3. Create RESTful web service to return list of subreddit name and number of times that subreddit appear the most in decending order
+3. Create RESTful web service to return top 10 of subreddit name and number of times that subreddit appear the most in decending order
 
 With best regards,
 
