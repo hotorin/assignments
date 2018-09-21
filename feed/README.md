@@ -30,7 +30,7 @@ choices you make as a developer, and how you solve problems presented to you.
 
 2. Create RESTful web service to provide those data
 
-3. Create RESTful web service to return list of subreddit that appear the most in decending order
+3. Create RESTful web service to return list of subreddit name and number of times that subreddit appear the most in decending order
 
 With best regards,
 
