@@ -2,6 +2,7 @@ const Knex = require('knex');
 const _ = require('lodash');
 
 const knexOptions = require('../knexfile');
+const { camelCaseObjectKeys } = require('../utils');
 
 const knex = Knex(_.omit(knexOptions, ['migrations', 'seeds']))
 
@@ -12,10 +13,17 @@ class Card {
 
     async getAll() {
         return knex.from(this.tableName)
-            .select('id', 'name', 'available_from', 'available_to', 'template_properties')
+            .select()
             .where('deleted_at', null)
-            .then(rows => rows)
-            .catch((err) => { throw err; });
+            .then(rows => {
+                return _.map(
+                    rows,
+                    (row) => camelCaseObjectKeys(row),
+                );
+            })
+            .catch((err) => {
+                throw err;
+            });
     }
 }
 

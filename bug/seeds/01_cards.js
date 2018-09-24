@@ -6,8 +6,8 @@ exports.seed = function (knex) {
             return knex('cards').insert([
                 {
                     name: 'card1',
-                    available_from: moment().format(),
-                    available_to: moment().add(2, 'days').format(),
+                    available_from: '2018-02-20',
+                    available_to: '2018-02-24',
                     template_properties: {
                         texts_in_card: [
                             'card1_text',
@@ -21,8 +21,8 @@ exports.seed = function (knex) {
                 },
                 {
                     name: 'card2',
-                    available_from: moment().format(),
-                    available_to: moment().add(2, 'days').format(),
+                    available_from: '2018-02-20',
+                    available_to: '2018-02-24',
                     template_properties: {
                         feeds: [
                             {
@@ -36,8 +36,8 @@ exports.seed = function (knex) {
                 },
                 {
                     name: 'card3',
-                    available_from: moment().format(),
-                    available_to: moment().add(2, 'days').format(),
+                    available_from: '2018-02-20',
+                    available_to: '2018-02-24',
                     template_properties: {
                         available_on_platform: {
                             android: true,

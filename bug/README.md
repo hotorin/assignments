@@ -22,7 +22,62 @@ choices you make as a developer, and how you solve problems presented to you.
 
 ## Task
 
-1. Fix bug when get all cards, return incorrect result
+1. Fix bug when get call all cards (`/cards`), API return incorrect result
+
+    - expected result
+
+    ```json
+    [
+        {
+            "id": 1,
+            "name": "card1",
+            "availableFrom": "20/2/18",
+            "availableTo": "24/2/18",
+            "templateProperties": {
+                "textsInCard": [
+                    "card1Text",
+                    {
+                        "textsObject": "super_text"
+                    }
+                ]
+            }
+        },
+        {
+            "id": 2,
+            "name": "card2",
+            "availableFrom": "20/2/18",
+            "availableTo": "24/2/18",
+            "templateProperties": {
+                "feeds": [
+                    {
+                        "matchId": [
+                            "5",
+                            "6",
+                            "7",
+                            "8"
+                        ]
+                    },
+                    "matchPoint",
+                ]
+            }
+        },
+        {
+            "id": 3,
+            "name": "card3",
+            "availableFrom": "20/2/18",
+            "availableTo": "24/2/18",
+            "templateProperties": {
+                "availableOnPlatform": {
+                    "android": true,
+                    "ios": true,
+                    "web": true
+                }
+            }
+        }
+    ]
+    ```
+
+2. Finish CRUD function for `/cards` api endpoint
 
 With best regards,
 
