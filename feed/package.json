@@ -1,6 +1,9 @@
 {
   "name": "feed",
   "version": "1.0.0",
+  "scripts": {
+    "frontend": "node frontend.js"
+  },
   "main": "index.js",
   "license": "MIT",
   "dependencies": {
