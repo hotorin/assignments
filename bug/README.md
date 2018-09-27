@@ -57,7 +57,7 @@ choices you make as a developer, and how you solve problems presented to you.
                             "8"
                         ]
                     },
-                    "matchPoint",
+                    "matchPoint"
                 ]
             }
         },

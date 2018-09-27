@@ -4,7 +4,7 @@ const _ = require('lodash');
 const knexOptions = require('../knexfile');
 const { camelCaseObjectKeys } = require('../utils');
 
-const knex = Knex(_.omit(knexOptions, ['migrations', 'seeds']))
+const knex = Knex(_.omit(knexOptions, ['migrations', 'seeds']));
 
 class Card {
     constructor() {

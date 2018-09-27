@@ -1,6 +1,5 @@
 const config = require('config');
 const express = require('express');
-const _ = require('lodash');
 
 const card = require('./services/card');
 
