@@ -13,4 +13,9 @@ app.get('/cards', async (req, res) => {
     res.json(cards);
 });
 
+/**
+ * Part 2 code here
+ * Finish CRUD functions for cards
+ */
+
 module.exports = app;

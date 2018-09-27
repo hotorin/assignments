@@ -20,9 +20,20 @@ choices you make as a developer, and how you solve problems presented to you.
 
 - Please submit a solution that has the quality of your real work standards.
 
+## Setup
+
+This repo contains an API for a simple database with a single table.  You can run it with the following steps:
+
+```bash
+docker-compose up -d                # run the database
+yarn                                # install dependencies
+yarn run migration && yarn run seed # initialize the database
+yarn start                          # run the API on port 3000
+```
+
 ## Task
 
-1. Fix bug when get call all cards (`/cards`), API return incorrect result
+1. There is a bug when get call all cards (`/cards`), API return incorrect result
 
     - expected result
 
@@ -77,7 +88,7 @@ choices you make as a developer, and how you solve problems presented to you.
     ]
     ```
 
-2. Finish CRUD function for `/cards` api endpoint
+2. Finish CRUD (Create Retrieve Update Delete) API endpoints for `cards`
 
 With best regards,
 
