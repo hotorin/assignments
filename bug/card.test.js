@@ -1,7 +1,7 @@
 // divide.test.js
 const card = require('./services/card');
 const expectResultGetAll = [{
-        id: 10,
+        id: 1,
         name: "card1",
         availableFrom: "20/2/18",
         availableTo: "24/2/18",
@@ -14,7 +14,7 @@ const expectResultGetAll = [{
             ]
         }
     },{
-        id: 11,
+        id: 2,
         name: "card2",
         availableFrom: "20/2/18",
         availableTo: "24/2/18",
@@ -32,7 +32,7 @@ const expectResultGetAll = [{
             ]
         }
     },{
-        id: 12,
+        id: 3,
         name: "card3",
         availableFrom: "20/2/18",
         availableTo: "24/2/18",
