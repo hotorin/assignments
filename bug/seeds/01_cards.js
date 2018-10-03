@@ -28,7 +28,7 @@ exports.seed = function (knex) {
                             {
                                 match_id: ['5', '6', '7', '8'],
                             },
-                            'matchPoint',
+                            'matchpoint',
                         ],
                     },
                     created_at: moment().toISOString(),
