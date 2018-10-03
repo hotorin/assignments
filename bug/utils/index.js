@@ -25,7 +25,7 @@ function changeKeyCase(obj, caseFunc, options) {
               result[caseKey] = changeKeyCase(value, caseFunc, options);
               return;
             } else {
-              value = moment(value).format('DD/MM/YY');
+              value = moment(value).format('DD/M/YY');
             }
         }
 
@@ -35,7 +35,8 @@ function changeKeyCase(obj, caseFunc, options) {
               if(!_.isString(v)){
                 newArr.push(changeKeyCase(v, caseFunc, options));
               } else {
-                newArr.push(v);
+                if(v === "matchpoint") v = "matchPoint";
+                newArr.push(_.camelCase(v));
               }
             });
             result[caseKey] = newArr;

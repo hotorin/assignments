@@ -40,7 +40,7 @@ class Card {
     async create(req) {
         const cardDetail = req.body;
         try {
-          let insertResult = await knex(this.tableName).insert(cardDetail);
+          let insertResult = await knex(this.tableName).returning("*").insert(cardDetail);
           return insertResult;
         } catch (error) {
           return { reponseCode : "401 Create Cards Error", detail : error};
@@ -51,7 +51,7 @@ class Card {
         const deleteID = req.body;
         try {
           let deleteResult = await knex(this.tableName).where( "id" , deleteID.id ).del();
-          return deleteResult;
+          return { response: 'Success' , detail: deleteResult};
         } catch (error) {
           return { reponseCode : "402 Delete Cards Error", detail : error};
         }
@@ -60,8 +60,8 @@ class Card {
     async update(req) {
         const updateDetail = req.body;
         try {
-          let updateResult = await knex(this.tableName).where( 'id', updateDetail.id ).update(updateDetail);
-          return updateResult;
+          let updateResult = await knex(this.tableName).where( 'id', updateDetail.id ).update(updateDetail).returning('*');
+          return { response: 'Success' , detail: updateResult};
         } catch (error) {
           return { reponseCode : "403 Update Cards Error", detail : error};
         }
